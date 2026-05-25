@@ -321,13 +321,14 @@ function Landing() {
       <footer className="bg-[var(--brand-dark)] py-12 text-white/80">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-[var(--brand-lime)]">
-                <Droplets className="h-5 w-5 text-[var(--brand-dark)]" />
-              </div>
+            <div className="flex items-center gap-3">
+              <img src={mascotLogo} alt="Compacto Fibras" className="h-12 w-12 object-contain" />
               <div className="font-display text-xl font-extrabold text-white">COMPACTO FIBRAS</div>
             </div>
             <p className="mt-4 text-sm">Estações compactas de tratamento de efluentes. Engenharia, performance e conformidade.</p>
+            <div className="mt-4">
+              <CTAButton size="md">Falar no WhatsApp</CTAButton>
+            </div>
           </div>
           <div>
             <h4 className="font-display text-sm uppercase tracking-widest text-[var(--brand-lime)]">Contato</h4>
@@ -341,8 +342,19 @@ function Landing() {
               </li>
             </ul>
           </div>
-          <div className="md:text-right">
-            <CTAButton size="md">Falar no WhatsApp</CTAButton>
+          <div>
+            <h4 className="font-display text-sm uppercase tracking-widest text-[var(--brand-lime)]">Localização</h4>
+            <div className="mt-3 overflow-hidden rounded-lg border border-white/10">
+              <iframe
+                title="Localização Compacto Fibras - Chapecó SC"
+                src="https://www.google.com/maps?q=Chapec%C3%B3%2C+SC%2C+Brasil&output=embed"
+                width="100%"
+                height="180"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-xs text-white/60">
