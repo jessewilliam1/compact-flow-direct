@@ -9,7 +9,12 @@ import {
 } from "@/components/ui/accordion";
 import { WhatsappFloat } from "@/components/WhatsappFloat";
 import { WHATSAPP_URL, PHONE_DISPLAY } from "@/lib/contact";
-import heroImg from "@/assets/hero-station.jpg";
+import heroImg from "@/assets/station-hero.jpg";
+import mascotLogo from "@/assets/mascot-logo.png";
+import station1 from "@/assets/station-1.jpg";
+import station2 from "@/assets/station-2.jpg";
+import station3 from "@/assets/station-3.jpg";
+import station4 from "@/assets/station-4.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -54,9 +59,7 @@ function Landing() {
       <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-[var(--brand-dark)]">
-              <Droplets className="h-5 w-5 text-[var(--brand-lime)]" />
-            </div>
+            <img src={mascotLogo} alt="Mascote Compacto Fibras" className="h-12 w-12 object-contain" />
             <div className="leading-tight">
               <div className="font-display text-xl font-extrabold text-[var(--brand-dark)]">COMPACTO FIBRAS</div>
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Tratamento de Efluentes</div>
@@ -186,25 +189,26 @@ function Landing() {
         </div>
       </section>
 
-      {/* GALERIA */}
+      {/* NOSSOS PROJETOS */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Cases</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Nossos Projetos</span>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
-              Projetos Entregues, Resultados Comprovados
+              Estações Fabricadas e Entregues pela Compacto
             </h2>
+            <p className="mt-3 text-muted-foreground">Fibra de vidro de alta resistência, identidade visual padronizada e engenharia comprovada em cada unidade.</p>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: "Instalação industrial" },
-              { label: "Estação compacta" },
-              { label: "Obra finalizada" },
-              { label: "Detalhe técnico" },
+              { src: station1, label: "Reator + Filtro 1000L" },
+              { src: station2, label: "Linha de tanques compactos" },
+              { src: station3, label: "ETE 15M³ instalada" },
+              { src: station4, label: "Módulo Filtro/Reator" },
             ].map((g, i) => (
-              <figure key={i} className="overflow-hidden rounded-xl border border-border bg-secondary">
-                <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-[var(--brand-dark)]/10 to-[var(--brand-lime)]/10 text-center text-xs uppercase tracking-widest text-muted-foreground">
-                  [FOTO {i + 1} — INSERIR]
+              <figure key={i} className="overflow-hidden rounded-xl border border-border bg-secondary group">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={g.src} alt={g.label} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <figcaption className="px-4 py-3 text-sm font-medium text-[var(--brand-dark)]">{g.label}</figcaption>
               </figure>
@@ -317,13 +321,14 @@ function Landing() {
       <footer className="bg-[var(--brand-dark)] py-12 text-white/80">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-[var(--brand-lime)]">
-                <Droplets className="h-5 w-5 text-[var(--brand-dark)]" />
-              </div>
+            <div className="flex items-center gap-3">
+              <img src={mascotLogo} alt="Compacto Fibras" className="h-12 w-12 object-contain" />
               <div className="font-display text-xl font-extrabold text-white">COMPACTO FIBRAS</div>
             </div>
             <p className="mt-4 text-sm">Estações compactas de tratamento de efluentes. Engenharia, performance e conformidade.</p>
+            <div className="mt-4">
+              <CTAButton size="md">Falar no WhatsApp</CTAButton>
+            </div>
           </div>
           <div>
             <h4 className="font-display text-sm uppercase tracking-widest text-[var(--brand-lime)]">Contato</h4>
@@ -337,8 +342,19 @@ function Landing() {
               </li>
             </ul>
           </div>
-          <div className="md:text-right">
-            <CTAButton size="md">Falar no WhatsApp</CTAButton>
+          <div>
+            <h4 className="font-display text-sm uppercase tracking-widest text-[var(--brand-lime)]">Localização</h4>
+            <div className="mt-3 overflow-hidden rounded-lg border border-white/10">
+              <iframe
+                title="Localização Compacto Fibras - Chapecó SC"
+                src="https://www.google.com/maps?q=Chapec%C3%B3%2C+SC%2C+Brasil&output=embed"
+                width="100%"
+                height="180"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-xs text-white/60">
