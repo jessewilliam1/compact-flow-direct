@@ -189,25 +189,26 @@ function Landing() {
         </div>
       </section>
 
-      {/* GALERIA */}
+      {/* NOSSOS PROJETOS */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Cases</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Nossos Projetos</span>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
-              Projetos Entregues, Resultados Comprovados
+              Estações Fabricadas e Entregues pela Compacto
             </h2>
+            <p className="mt-3 text-muted-foreground">Fibra de vidro de alta resistência, identidade visual padronizada e engenharia comprovada em cada unidade.</p>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: "Instalação industrial" },
-              { label: "Estação compacta" },
-              { label: "Obra finalizada" },
-              { label: "Detalhe técnico" },
+              { src: station1, label: "Reator + Filtro 1000L" },
+              { src: station2, label: "Linha de tanques compactos" },
+              { src: station3, label: "ETE 15M³ instalada" },
+              { src: station4, label: "Módulo Filtro/Reator" },
             ].map((g, i) => (
-              <figure key={i} className="overflow-hidden rounded-xl border border-border bg-secondary">
-                <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-[var(--brand-dark)]/10 to-[var(--brand-lime)]/10 text-center text-xs uppercase tracking-widest text-muted-foreground">
-                  [FOTO {i + 1} — INSERIR]
+              <figure key={i} className="overflow-hidden rounded-xl border border-border bg-secondary group">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={g.src} alt={g.label} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <figcaption className="px-4 py-3 text-sm font-medium text-[var(--brand-dark)]">{g.label}</figcaption>
               </figure>
