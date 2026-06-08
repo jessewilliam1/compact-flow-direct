@@ -28,7 +28,7 @@ export function serverOutputFix(): Plugin {
         if (fs.existsSync(indexMjs)) {
           fs.writeFileSync(
             serverJs,
-            `import original from './index.mjs';\nexport default {\n  ...original.default,\n  fetch(request, env, context) {\n    return original.default.fetch(request, env ?? {}, context ?? {});\n  }\n};\n`,
+            `import original from './index.mjs';\nexport default {\n  ...original,\n  fetch(request, env, context) {\n    return original.fetch(request, env ?? {}, context ?? {});\n  }\n};\n`,
             "utf-8"
           );
         }
