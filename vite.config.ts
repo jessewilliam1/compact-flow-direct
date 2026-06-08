@@ -5,6 +5,7 @@
 //     error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { serverOutputFix } from "./src/lib/server-output-fix";
 
 // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
@@ -13,6 +14,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // This makes the project deployable as a static site on Vercel/GitHub Pages/Netlify
 // in addition to Lovable's own hosting.
 export default defineConfig({
+  plugins: [serverOutputFix()],
   tanstackStart: {
     server: { entry: "server" },
     prerender: {
