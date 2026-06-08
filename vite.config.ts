@@ -5,27 +5,17 @@
 //     error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-import { serverOutputFix } from "./src/lib/server-output-fix";
+import { generateStaticHtml } from "./src/lib/generate-static-html";
 
-// Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-// @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
-//
-// Prerender is enabled so the site is exported to static HTML (dist/client/index.html).
-// This makes the project deployable as a static site on Vercel/GitHub Pages/Netlify
-// in addition to Lovable's own hosting.
+// Desabilitamos o prerender porque o servidor Cloudflare não roda em Node.js
+// durante o build. Em vez disso, usamos um plugin que gera index.html estático
+// a partir dos assets do build do cliente.
 export default defineConfig({
-  plugins: [serverOutputFix()],
+  plugins: [generateStaticHtml()],
   tanstackStart: {
     server: { entry: "server" },
     prerender: {
-      enabled: true,
-      crawlLinks: true,
+      enabled: false,
     },
-    pages: [
-      {
-        path: "/",
-        prerender: { enabled: true },
-      },
-    ],
   },
 });
