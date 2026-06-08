@@ -18,7 +18,19 @@ export function generateStaticHtml(): Plugin {
         if (!fs.existsSync(assetsDir)) return;
 
         const files = fs.readdirSync(assetsDir);
-        const jsEntry = files.find((f) => /^index-[A-Za-z0-9]+\.js$/.test(f));
+        const jsFiles = files.filter((f) => /^index-[A-Za-z0-9]+\.js$/.test(f));
+
+        // O entry point é aquele que importa outro chunk no início do arquivo
+        let jsEntry = jsFiles.find((f) => {
+          const content = fs.readFileSync(path.join(assetsDir, f), "utf-8");
+          return content.startsWith('import') && jsFiles.some((other) => other !== f && content.includes(`./${other}`));
+        });
+
+        // Fallback: se não detectou, pega o menor (geralmente é o entry)
+        if (!jsEntry && jsFiles.length > 0) {
+          jsEntry = jsFiles.sort((a, b) => fs.statSync(path.join(assetsDir, a)).size - fs.statSync(path.join(assetsDir, b)).size)[0];
+        }
+
         const cssFile = files.find((f) => /^styles-[A-Za-z0-9]+\.css$/.test(f));
 
         if (!jsEntry) {
