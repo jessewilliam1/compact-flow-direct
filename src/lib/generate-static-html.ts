@@ -18,10 +18,13 @@ export function generateStaticHtml(): Plugin {
         if (!fs.existsSync(assetsDir)) return;
 
         const files = fs.readdirSync(assetsDir);
-        const jsFiles = files.filter((f) => /^index-[A-Za-z0-9]+\.js$/.test(f));
+        const jsFiles = files.filter((f) => /^[A-Za-z0-9_-]+-[A-Za-z0-9]+\.js$/.test(f));
+
+        // Preferimos a entrada estática própria; fallback para a entrada antiga.
+        let jsEntry = jsFiles.find((f) => /^client-[A-Za-z0-9]+\.js$/.test(f));
 
         // O entry point é aquele que importa outro chunk no início do arquivo
-        let jsEntry = jsFiles.find((f) => {
+        jsEntry ??= jsFiles.find((f) => {
           const content = fs.readFileSync(path.join(assetsDir, f), "utf-8");
           return content.startsWith('import') && jsFiles.some((other) => other !== f && content.includes(`./${other}`));
         });

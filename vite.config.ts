@@ -13,6 +13,7 @@ import { generateStaticHtml } from "./src/lib/generate-static-html";
 export default defineConfig({
   plugins: [generateStaticHtml()],
   tanstackStart: {
+    client: { entry: "client" },
     server: { entry: "server" },
     prerender: {
       enabled: false,
