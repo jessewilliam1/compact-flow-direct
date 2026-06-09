@@ -46,7 +46,12 @@ export function generateStaticHtml(): Plugin {
   <title>Compacto Fibras - Estações Compactas de Tratamento de Efluentes</title>
   <meta name="description" content="Soluções completas em estações compactas de tratamento de efluentes. Orçamento rápido via WhatsApp." />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" />
   ${cssFile ? `<link rel="stylesheet" href="/assets/${cssFile}" />` : ""}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18204450552"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18204450552');</script>
 </head>
 <body>
   <div id="root"></div>
