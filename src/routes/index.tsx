@@ -8,7 +8,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsappFloat } from "@/components/WhatsappFloat";
-import { WHATSAPP_URL, PHONE_DISPLAY } from "@/lib/contact";
+import { WHATSAPP_URL, PHONE_DISPLAY, trackWhatsappConversion } from "@/lib/contact";
 import heroImg from "@/assets/station-hero.jpg";
 import mascotLogo from "@/assets/mascot-logo.png";
 import station1 from "@/assets/station-1.jpg";
@@ -44,6 +44,7 @@ function CTAButton({ size = "md", variant = "primary", children = "Pedir Orçame
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={trackWhatsappConversion}
       className={`inline-flex items-center gap-2 rounded-md font-semibold uppercase tracking-wide shadow-brand transition-all hover:-translate-y-0.5 ${sizes[size]} ${variants[variant]}`}
     >
       <MessageCircle className="h-5 w-5" fill="currentColor" />
@@ -336,7 +337,7 @@ function Landing() {
               <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Chapecó — SC</li>
               <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> {PHONE_DISPLAY}</li>
               <li>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[var(--brand-lime)] hover:underline">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={trackWhatsappConversion} className="inline-flex items-center gap-2 text-[var(--brand-lime)] hover:underline">
                   <MessageCircle className="h-4 w-4" /> WhatsApp direto
                 </a>
               </li>
