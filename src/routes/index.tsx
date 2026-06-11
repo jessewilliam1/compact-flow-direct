@@ -8,7 +8,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import { WhatsappFloat } from "@/components/WhatsappFloat";
-import { WHATSAPP_URL, PHONE_DISPLAY } from "@/lib/contact";
+import { WHATSAPP_URL, PHONE_DISPLAY, trackWhatsappConversion } from "@/lib/contact";
 import heroImg from "@/assets/station-hero.jpg";
 import mascotLogo from "@/assets/mascot-logo.png";
 import station1 from "@/assets/station-1.jpg";
