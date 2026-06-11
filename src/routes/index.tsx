@@ -44,6 +44,7 @@ function CTAButton({ size = "md", variant = "primary", children = "Pedir Orçame
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={trackWhatsappConversion}
       className={`inline-flex items-center gap-2 rounded-md font-semibold uppercase tracking-wide shadow-brand transition-all hover:-translate-y-0.5 ${sizes[size]} ${variants[variant]}`}
     >
       <MessageCircle className="h-5 w-5" fill="currentColor" />
