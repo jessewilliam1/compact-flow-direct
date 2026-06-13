@@ -365,7 +365,7 @@ function Landing() {
       <section className="bg-secondary py-20">
         <div className="mx-auto max-w-3xl px-4">
           <div className="text-center">
-            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Perguntas Frequentes sobre Tratamento de Efluentes</h2>
+            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Perguntas Frequentes sobre Tratamento de Esgoto e Efluentes</h2>
           </div>
           <Accordion type="single" collapsible className="mt-10">
             {FAQ_ITEMS.map((f) => (
