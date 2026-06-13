@@ -318,7 +318,7 @@ function Landing() {
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="relative mx-auto max-w-3xl px-4 text-center">
           <h2 className="font-display text-4xl font-extrabold sm:text-5xl">
-            Tratamento de Efluentes em Chapecó: fale com um especialista
+            Tratamento de Esgoto e Efluentes em Chapecó e região Oeste de SC: fale com um especialista
           </h2>
           <p className="mt-4 text-lg text-white/80">Orçamento sem compromisso. Resposta rápida.</p>
           <div className="mt-8 flex flex-col items-center gap-4">
