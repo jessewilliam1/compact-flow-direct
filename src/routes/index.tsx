@@ -150,10 +150,10 @@ function Landing() {
               Chapecó — SC · Atendimento em todo o Brasil
             </div>
             <h1 className="font-display text-4xl font-extrabold leading-[0.95] sm:text-5xl md:text-6xl">
-              Tratamento de Efluentes <span className="text-[var(--brand-lime)]">Compacto</span>, Rápido e 100% Conforme a Lei
+              Tratamento de Esgoto e Efluentes <span className="text-[var(--brand-lime)]">Compacto</span> em Chapecó-SC, Rápido e 100% Conforme a Lei
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/80">
-              Estações compactas em fibra de vidro com até <strong className="text-[var(--brand-lime)]">97% de eficiência</strong> na redução de DBO. Engenharia séria, instalação em poucos dias.
+              Estações compactas de tratamento de esgoto e efluentes em fibra de vidro com até <strong className="text-[var(--brand-lime)]">97% de eficiência</strong> na redução de DBO. Engenharia séria, instalação em poucos dias em toda a região Oeste de Santa Catarina.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <CTAButton size="xl" />
