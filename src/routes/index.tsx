@@ -133,7 +133,7 @@ function Landing() {
             <img src={mascotLogo} alt="Logotipo da Compacto Fibras, fabricante de estações compactas de tratamento de efluentes em Chapecó-SC" className="h-12 w-12 object-contain" />
             <div className="leading-tight">
               <div className="font-display text-xl font-extrabold text-[var(--brand-dark)]">COMPACTO FIBRAS</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Tratamento de Efluentes</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Tratamento de Esgoto e Efluentes</div>
             </div>
           </div>
           <CTAButton size="md">Orçamento WhatsApp</CTAButton>
