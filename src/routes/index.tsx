@@ -17,17 +17,21 @@ import station3 from "@/assets/station-3.jpg";
 import station4 from "@/assets/station-4.jpg";
 
 const FAQ_ITEMS = [
-  { q: "Quanto tempo leva a instalação da ETE compacta?", a: "Por se tratar de um sistema pré-fabricado em fibra de vidro, a instalação da estação de tratamento de efluentes é muito mais rápida do que estações convencionais — normalmente em poucos dias, dependendo do porte do projeto e da preparação do local." },
-  { q: "A estação de tratamento de efluentes atende à legislação ambiental vigente?", a: "Sim. Nossas estações compactas de tratamento de efluentes são projetadas para atender 100% das exigências do CONAMA e dos órgãos ambientais estaduais e municipais, com eficiência de até 97% na redução de DBO." },
-  { q: "Vocês atendem o tratamento de efluentes fora de Chapecó?", a: "Sim. Estamos sediados em Chapecó-SC, mas atendemos clientes em todo o Brasil, com logística e suporte técnico para a instalação da ETE compacta onde for necessário." },
-  { q: "Como funciona o orçamento da estação de tratamento de efluentes?", a: "É simples e sem compromisso. Você nos chama no WhatsApp, passa as informações básicas do seu projeto e nosso time técnico monta uma proposta sob medida em Chapecó-SC." },
+  { q: "Quanto tempo leva a instalação da ETE compacta de tratamento de esgoto?", a: "Por se tratar de um sistema pré-fabricado em fibra de vidro, a instalação da estação de tratamento de esgoto e efluentes é muito mais rápida do que estações convencionais — normalmente em poucos dias, dependendo do porte do projeto e da preparação do local em Chapecó ou região." },
+  { q: "A estação de tratamento de esgoto atende à legislação ambiental vigente?", a: "Sim. Nossas estações compactas de tratamento de esgoto e efluentes são projetadas para atender 100% das exigências do CONAMA e dos órgãos ambientais estaduais e municipais de Santa Catarina, com eficiência de até 97% na redução de DBO." },
+  { q: "Vocês atendem o tratamento de esgoto e efluentes fora de Chapecó?", a: "Sim. Estamos sediados em Chapecó-SC, mas atendemos toda a região Oeste de Santa Catarina — incluindo Xanxerê, Concórdia, Joaçaba, Pinhalzinho, São Miguel do Oeste, Maravilha, Quilombo e Xaxim — além de clientes em todo o Brasil." },
+  { q: "Como funciona o orçamento da estação de tratamento de esgoto?", a: "É simples e sem compromisso. Você nos chama no WhatsApp, passa as informações básicas do seu projeto e nosso time técnico monta uma proposta sob medida para tratamento de esgoto e efluentes em Chapecó-SC e região." },
+  { q: "Qual a diferença entre uma estação de tratamento de esgoto compacta e uma estação convencional?", a: "A estação convencional exige obra civil, grandes áreas e meses de construção. A estação compacta de tratamento de esgoto em fibra de vidro chega pré-fabricada, ocupa muito menos espaço, dispensa obras complexas e entra em operação em poucos dias — com a mesma eficiência de tratamento de efluentes." },
+  { q: "A Compacto Fibras instala estações de tratamento de esgoto fora de Chapecó, em outras cidades de Santa Catarina?", a: "Sim. Além de Chapecó, instalamos estações de tratamento de esgoto e efluentes em diversas cidades da região Oeste de SC, como Xanxerê, Concórdia, Joaçaba, Pinhalzinho, São Miguel do Oeste, Maravilha, Quilombo e Xaxim, com logística e suporte técnico completos." },
+  { q: "Quanto tempo demora desde o pedido até a estação de tratamento de esgoto estar funcionando?", a: "Depois de definido o projeto, a fabricação e a instalação da estação de tratamento de esgoto compacta levam, em média, poucas semanas — muito mais rápido do que uma ETE convencional, que pode levar meses de obra." },
+  { q: "Qual a diferença entre tratamento de esgoto e tratamento de efluentes industriais?", a: "O tratamento de esgoto sanitário trata águas residuais domésticas (de banheiros, cozinhas e condomínios), enquanto o tratamento de efluentes industriais lida com águas residuais de processos produtivos, como frigoríficos e indústrias. A Compacto Fibras projeta estações compactas para os dois casos, sempre conforme o CONAMA." },
 ];
 
 const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Compacto Fibras",
-  description: "Estações compactas de tratamento de efluentes (ETE) em fibra de vidro com até 97% de eficiência na redução de DBO.",
+  description: "Empresa especializada em tratamento de esgoto e efluentes industriais em Chapecó-SC. Estações compactas de tratamento de esgoto e efluentes (ETE) em fibra de vidro com até 97% de eficiência na redução de DBO.",
   image: "https://compact-flow-direct.lovable.app/favicon.png",
   url: "https://compact-flow-direct.lovable.app",
   telephone: "+554931993922",
@@ -37,7 +41,20 @@ const LOCAL_BUSINESS_JSONLD = {
     addressRegion: "SC",
     addressCountry: "BR",
   },
-  areaServed: "BR",
+  areaServed: [
+    { "@type": "City", name: "Chapecó" },
+    { "@type": "City", name: "Xanxerê" },
+    { "@type": "City", name: "Concórdia" },
+    { "@type": "City", name: "Joaçaba" },
+    { "@type": "City", name: "Pinhalzinho" },
+    { "@type": "City", name: "São Miguel do Oeste" },
+    { "@type": "City", name: "Maravilha" },
+    { "@type": "City", name: "Quilombo" },
+    { "@type": "City", name: "Xaxim" },
+    { "@type": "AdministrativeArea", name: "Região Oeste de Santa Catarina" },
+  ],
+  serviceType: "Tratamento de esgoto e efluentes industriais",
+  keywords: "tratamento de esgoto, tratamento de efluentes, estação de tratamento de esgoto, ETE compacta, tratamento de efluentes industriais, Chapecó, Santa Catarina",
 };
 
 const FAQ_JSONLD = {
@@ -49,6 +66,20 @@ const FAQ_JSONLD = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
+
+const SERVICE_CITIES = [
+  "Chapecó", "Xanxerê", "Concórdia", "Joaçaba", "Pinhalzinho",
+  "São Miguel do Oeste", "Maravilha", "Quilombo", "Xaxim",
+];
+
+const DELIVERED_PROJECTS = [
+  "ETE Cliente [NOME DA EMPRESA] — Chapecó (SC)",
+  "Estação de Tratamento de Esgoto — [NOME DA EMPRESA] — [CIDADE] (SC)",
+  "ETE Compacta — [NOME DA EMPRESA] — Xanxerê (SC)",
+  "Estação de Tratamento de Efluentes — [NOME DA EMPRESA] — Concórdia (SC)",
+  "ETE Cliente [NOME DA EMPRESA] — São Miguel do Oeste (SC)",
+  "Estação de Tratamento de Esgoto — [NOME DA EMPRESA] — [CIDADE] (SC)",
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
