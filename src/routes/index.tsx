@@ -334,15 +334,10 @@ function Landing() {
       <section className="bg-secondary py-20">
         <div className="mx-auto max-w-3xl px-4">
           <div className="text-center">
-            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Perguntas Frequentes</h2>
+            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Perguntas Frequentes sobre Tratamento de Efluentes</h2>
           </div>
           <Accordion type="single" collapsible className="mt-10">
-            {[
-              { q: "Quanto tempo leva a instalação?", a: "Por se tratar de um sistema pré-fabricado em fibra de vidro, a instalação é muito mais rápida do que estações convencionais — normalmente em poucos dias, dependendo do porte do projeto e da preparação do local." },
-              { q: "A estação atende à legislação ambiental vigente?", a: "Sim. Nossas estações são projetadas para atender 100% das exigências do CONAMA e dos órgãos ambientais estaduais e municipais, com eficiência de até 97% na redução de DBO." },
-              { q: "Vocês atendem fora de Chapecó?", a: "Sim. Estamos sediados em Chapecó-SC, mas atendemos clientes em todo o Brasil, com logística e suporte técnico para a instalação onde for necessário." },
-              { q: "Como funciona o orçamento?", a: "É simples e sem compromisso. Você nos chama no WhatsApp, passa as informações básicas do seu projeto e nosso time técnico monta uma proposta sob medida." },
-            ].map((f) => (
+            {FAQ_ITEMS.map((f) => (
               <AccordionItem key={f.q} value={f.q} className="border-border">
                 <AccordionTrigger className="text-left font-display text-lg font-bold uppercase text-[var(--brand-dark)] hover:no-underline">
                   {f.q}
