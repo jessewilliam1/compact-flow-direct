@@ -292,8 +292,8 @@ function Landing() {
       <section className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
-            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Ideal para:</h2>
-            <p className="mt-2 text-muted-foreground">Atendemos diversos setores com soluções sob medida.</p>
+            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Tratamento de esgoto e efluentes ideal para:</h2>
+            <p className="mt-2 text-muted-foreground">Atendemos diversos setores em Chapecó e região com soluções sob medida.</p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
             {[
