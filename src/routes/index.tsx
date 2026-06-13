@@ -235,7 +235,7 @@ function Landing() {
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Nossos Projetos</span>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
-              Estações Fabricadas e Entregues pela Compacto
+              Estações de Tratamento de Efluentes Fabricadas pela Compacto Fibras
             </h2>
             <p className="mt-3 text-muted-foreground">Fibra de vidro de alta resistência, identidade visual padronizada e engenharia comprovada em cada unidade.</p>
           </div>
