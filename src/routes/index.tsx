@@ -260,6 +260,42 @@ function Landing() {
         </div>
       </section>
 
+      {/* CONTEÚDO SEO LONG-TAIL */}
+      <section className="py-20">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
+            Estação compacta de tratamento de esgoto em Chapecó e região Oeste de Santa Catarina
+          </h2>
+          <div className="mt-6 space-y-5 text-muted-foreground leading-relaxed">
+            <p>
+              A Compacto Fibras é uma empresa especializada em tratamento de efluentes industriais e
+              esgoto sanitário em Chapecó, oferecendo estações compactas em fibra de vidro que cabem
+              onde sistemas convencionais não cabem. Nossa estação de tratamento de esgoto (ETE)
+              compacta é projetada para frigoríficos, condomínios, indústrias e empreendimentos em
+              toda Santa Catarina, com fabricação própria e instalação rápida — uma solução prática
+              tanto para quem busca tratamento de esgoto doméstico quanto para quem precisa tratar
+              efluentes de processos produtivos.
+            </p>
+            <p>
+              Uma das dúvidas mais comuns de quem nos procura é quanto custa instalar uma estação de
+              tratamento de esgoto compacta em fibra de vidro em Chapecó. O investimento varia conforme
+              a vazão e o tipo de efluente, mas a grande vantagem é a economia: por ser pré-fabricada,
+              a estação dispensa obra civil pesada, reduz prazos e custos e entra em operação em poucos
+              dias. É a solução rápida e econômica para tratamento de esgoto sem obra civil em Chapecó e
+              cidades vizinhas, sem abrir mão da eficiência de até 97% na redução de DBO.
+            </p>
+            <p>
+              Atuamos como empresa de engenharia ambiental para tratamento de esgoto e águas residuais
+              conforme as normas do CONAMA e dos órgãos ambientais de Santa Catarina. Cada projeto é
+              dimensionado por engenheiros, testado em campo e entregue pronto para aprovação, garantindo
+              que o tratamento de esgoto e efluentes da sua operação fique 100% dentro da legislação. Fale
+              com a Compacto Fibras e receba uma proposta sob medida para a sua estação de tratamento de
+              esgoto e efluentes na região Oeste de SC.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* NOSSOS PROJETOS */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4">
