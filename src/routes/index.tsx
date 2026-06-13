@@ -324,6 +324,50 @@ function Landing() {
         </div>
       </section>
 
+      {/* PROJETOS ENTREGUES */}
+      <section className="bg-secondary py-20">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="text-center">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Prova Social</span>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
+              Projetos Entregues: Estações de Tratamento de Esgoto Instaladas
+            </h2>
+            <p className="mt-3 text-muted-foreground">Algumas das estações de tratamento de esgoto e efluentes que projetamos e instalamos em Chapecó e região.</p>
+          </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {DELIVERED_PROJECTS.map((p, i) => (
+              <div key={i} className="flex items-start gap-3 rounded-xl border border-border bg-white p-5">
+                <Droplets className="mt-0.5 h-5 w-5 shrink-0 text-[var(--brand)]" />
+                <h3 className="font-display text-base font-bold text-[var(--brand-dark)]">{p}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ÁREAS DE ATENDIMENTO */}
+      <section className="py-20">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="text-center">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Onde Atendemos</span>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
+              Áreas de Atendimento na região Oeste de Santa Catarina
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICE_CITIES.map((city) => (
+              <div key={city} className="flex items-start gap-3 rounded-xl border border-border bg-white p-5">
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[var(--brand)]" />
+                <div>
+                  <h3 className="font-display text-lg font-bold text-[var(--brand-dark)]">{city}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">Atendemos {city} com estações compactas de tratamento de esgoto e efluentes.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PARA QUEM É */}
       <section className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-4">
