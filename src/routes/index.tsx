@@ -16,6 +16,40 @@ import station2 from "@/assets/station-2.jpg";
 import station3 from "@/assets/station-3.jpg";
 import station4 from "@/assets/station-4.jpg";
 
+const FAQ_ITEMS = [
+  { q: "Quanto tempo leva a instalação da ETE compacta?", a: "Por se tratar de um sistema pré-fabricado em fibra de vidro, a instalação da estação de tratamento de efluentes é muito mais rápida do que estações convencionais — normalmente em poucos dias, dependendo do porte do projeto e da preparação do local." },
+  { q: "A estação de tratamento de efluentes atende à legislação ambiental vigente?", a: "Sim. Nossas estações compactas de tratamento de efluentes são projetadas para atender 100% das exigências do CONAMA e dos órgãos ambientais estaduais e municipais, com eficiência de até 97% na redução de DBO." },
+  { q: "Vocês atendem o tratamento de efluentes fora de Chapecó?", a: "Sim. Estamos sediados em Chapecó-SC, mas atendemos clientes em todo o Brasil, com logística e suporte técnico para a instalação da ETE compacta onde for necessário." },
+  { q: "Como funciona o orçamento da estação de tratamento de efluentes?", a: "É simples e sem compromisso. Você nos chama no WhatsApp, passa as informações básicas do seu projeto e nosso time técnico monta uma proposta sob medida em Chapecó-SC." },
+];
+
+const LOCAL_BUSINESS_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Compacto Fibras",
+  description: "Estações compactas de tratamento de efluentes (ETE) em fibra de vidro com até 97% de eficiência na redução de DBO.",
+  image: "https://compact-flow-direct.lovable.app/favicon.png",
+  url: "https://compact-flow-direct.lovable.app",
+  telephone: "+554931993922",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Chapecó",
+    addressRegion: "SC",
+    addressCountry: "BR",
+  },
+  areaServed: "BR",
+};
+
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -25,9 +59,14 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Estações compactas, rápidas de instalar e 100% conforme a legislação ambiental." },
       { property: "og:type", content: "website" },
     ],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(LOCAL_BUSINESS_JSONLD) },
+      { type: "application/ld+json", children: JSON.stringify(FAQ_JSONLD) },
+    ],
   }),
   component: Landing,
 });
+
 
 function CTAButton({ size = "md", variant = "primary", children = "Pedir Orçamento no WhatsApp" }: { size?: "md" | "lg" | "xl"; variant?: "primary" | "inverse"; children?: React.ReactNode }) {
   const sizes = {
