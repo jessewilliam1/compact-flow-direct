@@ -266,16 +266,16 @@ function Landing() {
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Nossos Projetos</span>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
-              Estações de Tratamento de Efluentes Fabricadas pela Compacto Fibras
+              Estações de Tratamento de Esgoto e Efluentes Fabricadas pela Compacto Fibras
             </h2>
-            <p className="mt-3 text-muted-foreground">Fibra de vidro de alta resistência, identidade visual padronizada e engenharia comprovada em cada unidade.</p>
+            <p className="mt-3 text-muted-foreground">Fibra de vidro de alta resistência, identidade visual padronizada e engenharia comprovada em cada estação de tratamento de esgoto e efluentes entregue em Santa Catarina.</p>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { src: station1, label: "Reator + Filtro 1000L", alt: "Reator e filtro de 1000L em fibra de vidro para tratamento de efluentes" },
-              { src: station2, label: "Linha de tanques compactos", alt: "Linha de tanques compactos em fibra de vidro para estação de tratamento de efluentes" },
-              { src: station3, label: "ETE 15M³ instalada", alt: "ETE compacta de 15m³ instalada para tratamento de efluentes" },
-              { src: station4, label: "Módulo Filtro/Reator", alt: "Módulo de filtro e reator de estação compacta de tratamento de efluentes" },
+              { src: station1, label: "Reator + Filtro 1000L", alt: "Reator e filtro de 1000L em fibra de vidro para estação compacta de tratamento de esgoto e efluentes em Chapecó SC - Compacto Fibras" },
+              { src: station2, label: "Linha de tanques compactos", alt: "Linha de tanques compactos em fibra de vidro para estação de tratamento de esgoto e efluentes na região Oeste de Santa Catarina - Compacto Fibras" },
+              { src: station3, label: "ETE 15M³ instalada", alt: "ETE compacta de 15m³ instalada para tratamento de esgoto e efluentes industriais em Chapecó SC - Compacto Fibras" },
+              { src: station4, label: "Módulo Filtro/Reator", alt: "Módulo de filtro e reator de estação compacta de tratamento de esgoto e efluentes - Compacto Fibras Chapecó SC" },
             ].map((g, i) => (
               <figure key={i} className="overflow-hidden rounded-xl border border-border bg-secondary group">
                 <div className="aspect-[4/3] overflow-hidden">
