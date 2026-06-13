@@ -187,7 +187,7 @@ function Landing() {
       <section className="bg-secondary py-16">
         <div className="mx-auto max-w-5xl px-4 text-center">
           <h2 className="font-display text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">
-            Precisa de tratamento de efluentes sem perder tempo nem espaço?
+            Precisa de tratamento de esgoto e efluentes em Chapecó sem perder tempo nem espaço?
           </h2>
           <p className="mt-3 text-muted-foreground">Os problemas que adiar custa caro:</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
