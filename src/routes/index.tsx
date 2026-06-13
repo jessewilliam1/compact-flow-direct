@@ -84,10 +84,10 @@ const DELIVERED_PROJECTS = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Compacto Fibras — Estações Compactas de Tratamento de Efluentes" },
-      { name: "description", content: "Estações compactas de tratamento de efluentes com 97% de eficiência. Instalação rápida, conformidade legal e atendimento em todo o Brasil. Peça orçamento em Chapecó-SC." },
-      { property: "og:title", content: "Compacto Fibras — Tratamento de Efluentes" },
-      { property: "og:description", content: "Estações compactas, rápidas de instalar e 100% conforme a legislação ambiental." },
+      { title: "Estação de Tratamento de Esgoto e Efluentes em Chapecó-SC | ETE Compacta | Compacto Fibras" },
+      { name: "description", content: "Empresa de tratamento de esgoto e efluentes industriais em Chapecó-SC. Estações compactas de tratamento de esgoto em fibra de vidro para indústrias, frigoríficos, condomínios e hospitais. Instalação rápida, 97% de eficiência e 100% conforme legislação ambiental CONAMA. Atendimento em toda a região Oeste de Santa Catarina." },
+      { property: "og:title", content: "Tratamento de Esgoto e Efluentes em Chapecó-SC | ETE Compacta" },
+      { property: "og:description", content: "Estações compactas de tratamento de esgoto e efluentes em fibra de vidro. Instalação rápida, 97% de eficiência e conforme o CONAMA. Atendimento em Chapecó e região Oeste de SC." },
       { property: "og:type", content: "website" },
     ],
     scripts: [
