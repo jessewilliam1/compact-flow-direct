@@ -241,14 +241,14 @@ function Landing() {
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { src: station1, label: "Reator + Filtro 1000L" },
-              { src: station2, label: "Linha de tanques compactos" },
-              { src: station3, label: "ETE 15M³ instalada" },
-              { src: station4, label: "Módulo Filtro/Reator" },
+              { src: station1, label: "Reator + Filtro 1000L", alt: "Reator e filtro de 1000L em fibra de vidro para tratamento de efluentes" },
+              { src: station2, label: "Linha de tanques compactos", alt: "Linha de tanques compactos em fibra de vidro para estação de tratamento de efluentes" },
+              { src: station3, label: "ETE 15M³ instalada", alt: "ETE compacta de 15m³ instalada para tratamento de efluentes" },
+              { src: station4, label: "Módulo Filtro/Reator", alt: "Módulo de filtro e reator de estação compacta de tratamento de efluentes" },
             ].map((g, i) => (
               <figure key={i} className="overflow-hidden rounded-xl border border-border bg-secondary group">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={g.src} alt={g.label} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={g.src} alt={g.alt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <figcaption className="px-4 py-3 text-sm font-medium text-[var(--brand-dark)]">{g.label}</figcaption>
               </figure>
