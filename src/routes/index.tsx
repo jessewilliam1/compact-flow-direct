@@ -130,7 +130,7 @@ function Landing() {
       <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img src={mascotLogo} alt="Logotipo da Compacto Fibras, fabricante de estações compactas de tratamento de efluentes em Chapecó-SC" className="h-12 w-12 object-contain" />
+            <img src={mascotLogo} alt="Logotipo da Compacto Fibras, empresa de tratamento de esgoto e efluentes e estações compactas (ETE) em Chapecó-SC" className="h-12 w-12 object-contain" />
             <div className="leading-tight">
               <div className="font-display text-xl font-extrabold text-[var(--brand-dark)]">COMPACTO FIBRAS</div>
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Tratamento de Esgoto e Efluentes</div>
