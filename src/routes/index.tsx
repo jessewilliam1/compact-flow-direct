@@ -140,7 +140,7 @@ function Landing() {
             <div className="absolute -inset-4 rounded-2xl bg-[var(--brand-lime)]/20 blur-2xl" />
             <img
               src={heroImg}
-              alt="Estação compacta de tratamento de efluentes Compacto Fibras"
+              alt="Estação compacta de tratamento de efluentes (ETE) em fibra de vidro fabricada pela Compacto Fibras em Chapecó-SC"
               width={1920}
               height={1080}
               className="relative w-full rounded-xl border border-white/10 shadow-2xl"
