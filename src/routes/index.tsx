@@ -424,6 +424,7 @@ function Landing() {
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-xs text-white/60">
+          <p className="mb-2">Compacto Fibras — Tratamento de Esgoto e Efluentes em Chapecó, SC | Atendimento em toda a região Oeste de Santa Catarina</p>
           © {new Date().getFullYear()} Compacto Fibras — Todos os direitos reservados.
         </div>
       </footer>
