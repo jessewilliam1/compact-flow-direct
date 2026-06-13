@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Compacto Fibras" },
       { name: "twitter:description", content: "Landing page for Compacto Fibras, specializing in compact wastewater treatment stations." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e9bfe630-e6d2-467c-8577-8fb439698432/id-preview-8a8a8e04--e0020dfc-9040-4089-9768-5201cf58ba37.lovable.app-1779370256720.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e9bfe630-e6d2-467c-8577-8fb439698432/id-preview-8a8a8e04--e0020dfc-9040-4089-9768-5201cf58ba37.lovable.app-1779370256720.png" },

@@ -16,6 +16,40 @@ import station2 from "@/assets/station-2.jpg";
 import station3 from "@/assets/station-3.jpg";
 import station4 from "@/assets/station-4.jpg";
 
+const FAQ_ITEMS = [
+  { q: "Quanto tempo leva a instalação da ETE compacta?", a: "Por se tratar de um sistema pré-fabricado em fibra de vidro, a instalação da estação de tratamento de efluentes é muito mais rápida do que estações convencionais — normalmente em poucos dias, dependendo do porte do projeto e da preparação do local." },
+  { q: "A estação de tratamento de efluentes atende à legislação ambiental vigente?", a: "Sim. Nossas estações compactas de tratamento de efluentes são projetadas para atender 100% das exigências do CONAMA e dos órgãos ambientais estaduais e municipais, com eficiência de até 97% na redução de DBO." },
+  { q: "Vocês atendem o tratamento de efluentes fora de Chapecó?", a: "Sim. Estamos sediados em Chapecó-SC, mas atendemos clientes em todo o Brasil, com logística e suporte técnico para a instalação da ETE compacta onde for necessário." },
+  { q: "Como funciona o orçamento da estação de tratamento de efluentes?", a: "É simples e sem compromisso. Você nos chama no WhatsApp, passa as informações básicas do seu projeto e nosso time técnico monta uma proposta sob medida em Chapecó-SC." },
+];
+
+const LOCAL_BUSINESS_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Compacto Fibras",
+  description: "Estações compactas de tratamento de efluentes (ETE) em fibra de vidro com até 97% de eficiência na redução de DBO.",
+  image: "https://compact-flow-direct.lovable.app/favicon.png",
+  url: "https://compact-flow-direct.lovable.app",
+  telephone: "+554931993922",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Chapecó",
+    addressRegion: "SC",
+    addressCountry: "BR",
+  },
+  areaServed: "BR",
+};
+
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -25,9 +59,14 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Estações compactas, rápidas de instalar e 100% conforme a legislação ambiental." },
       { property: "og:type", content: "website" },
     ],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(LOCAL_BUSINESS_JSONLD) },
+      { type: "application/ld+json", children: JSON.stringify(FAQ_JSONLD) },
+    ],
   }),
   component: Landing,
 });
+
 
 function CTAButton({ size = "md", variant = "primary", children = "Pedir Orçamento no WhatsApp" }: { size?: "md" | "lg" | "xl"; variant?: "primary" | "inverse"; children?: React.ReactNode }) {
   const sizes = {
@@ -60,7 +99,7 @@ function Landing() {
       <header className="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img src={mascotLogo} alt="Mascote Compacto Fibras" className="h-12 w-12 object-contain" />
+            <img src={mascotLogo} alt="Logotipo da Compacto Fibras, fabricante de estações compactas de tratamento de efluentes em Chapecó-SC" className="h-12 w-12 object-contain" />
             <div className="leading-tight">
               <div className="font-display text-xl font-extrabold text-[var(--brand-dark)]">COMPACTO FIBRAS</div>
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Tratamento de Efluentes</div>
@@ -101,7 +140,7 @@ function Landing() {
             <div className="absolute -inset-4 rounded-2xl bg-[var(--brand-lime)]/20 blur-2xl" />
             <img
               src={heroImg}
-              alt="Estação compacta de tratamento de efluentes Compacto Fibras"
+              alt="Estação compacta de tratamento de efluentes (ETE) em fibra de vidro fabricada pela Compacto Fibras em Chapecó-SC"
               width={1920}
               height={1080}
               className="relative w-full rounded-xl border border-white/10 shadow-2xl"
@@ -117,7 +156,7 @@ function Landing() {
       <section className="bg-secondary py-16">
         <div className="mx-auto max-w-5xl px-4 text-center">
           <h2 className="font-display text-3xl font-bold text-[var(--brand-dark)] sm:text-4xl">
-            Sua empresa precisa tratar efluentes e não pode perder tempo nem espaço?
+            Precisa de tratamento de efluentes sem perder tempo nem espaço?
           </h2>
           <p className="mt-3 text-muted-foreground">Os problemas que adiar custa caro:</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -142,7 +181,7 @@ function Landing() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">A Solução</span>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl md:text-5xl">
-              Estações Compactas de Alta Performance — Projetadas para Funcionar de Verdade
+              ETE Compacta de Tratamento de Efluentes de Alta Performance
             </h2>
           </div>
 
@@ -196,20 +235,20 @@ function Landing() {
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Nossos Projetos</span>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
-              Estações Fabricadas e Entregues pela Compacto
+              Estações de Tratamento de Efluentes Fabricadas pela Compacto Fibras
             </h2>
             <p className="mt-3 text-muted-foreground">Fibra de vidro de alta resistência, identidade visual padronizada e engenharia comprovada em cada unidade.</p>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { src: station1, label: "Reator + Filtro 1000L" },
-              { src: station2, label: "Linha de tanques compactos" },
-              { src: station3, label: "ETE 15M³ instalada" },
-              { src: station4, label: "Módulo Filtro/Reator" },
+              { src: station1, label: "Reator + Filtro 1000L", alt: "Reator e filtro de 1000L em fibra de vidro para tratamento de efluentes" },
+              { src: station2, label: "Linha de tanques compactos", alt: "Linha de tanques compactos em fibra de vidro para estação de tratamento de efluentes" },
+              { src: station3, label: "ETE 15M³ instalada", alt: "ETE compacta de 15m³ instalada para tratamento de efluentes" },
+              { src: station4, label: "Módulo Filtro/Reator", alt: "Módulo de filtro e reator de estação compacta de tratamento de efluentes" },
             ].map((g, i) => (
               <figure key={i} className="overflow-hidden rounded-xl border border-border bg-secondary group">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={g.src} alt={g.label} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={g.src} alt={g.alt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <figcaption className="px-4 py-3 text-sm font-medium text-[var(--brand-dark)]">{g.label}</figcaption>
               </figure>
@@ -248,7 +287,7 @@ function Landing() {
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="relative mx-auto max-w-3xl px-4 text-center">
           <h2 className="font-display text-4xl font-extrabold sm:text-5xl">
-            Fale agora com um especialista em Chapecó
+            Tratamento de Efluentes em Chapecó: fale com um especialista
           </h2>
           <p className="mt-4 text-lg text-white/80">Orçamento sem compromisso. Resposta rápida.</p>
           <div className="mt-8 flex flex-col items-center gap-4">
@@ -295,15 +334,10 @@ function Landing() {
       <section className="bg-secondary py-20">
         <div className="mx-auto max-w-3xl px-4">
           <div className="text-center">
-            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Perguntas Frequentes</h2>
+            <h2 className="font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">Perguntas Frequentes sobre Tratamento de Efluentes</h2>
           </div>
           <Accordion type="single" collapsible className="mt-10">
-            {[
-              { q: "Quanto tempo leva a instalação?", a: "Por se tratar de um sistema pré-fabricado em fibra de vidro, a instalação é muito mais rápida do que estações convencionais — normalmente em poucos dias, dependendo do porte do projeto e da preparação do local." },
-              { q: "A estação atende à legislação ambiental vigente?", a: "Sim. Nossas estações são projetadas para atender 100% das exigências do CONAMA e dos órgãos ambientais estaduais e municipais, com eficiência de até 97% na redução de DBO." },
-              { q: "Vocês atendem fora de Chapecó?", a: "Sim. Estamos sediados em Chapecó-SC, mas atendemos clientes em todo o Brasil, com logística e suporte técnico para a instalação onde for necessário." },
-              { q: "Como funciona o orçamento?", a: "É simples e sem compromisso. Você nos chama no WhatsApp, passa as informações básicas do seu projeto e nosso time técnico monta uma proposta sob medida." },
-            ].map((f) => (
+            {FAQ_ITEMS.map((f) => (
               <AccordionItem key={f.q} value={f.q} className="border-border">
                 <AccordionTrigger className="text-left font-display text-lg font-bold uppercase text-[var(--brand-dark)] hover:no-underline">
                   {f.q}
@@ -323,7 +357,7 @@ function Landing() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <img src={mascotLogo} alt="Compacto Fibras" className="h-12 w-12 object-contain" />
+              <img src={mascotLogo} alt="Logotipo Compacto Fibras - estações compactas de tratamento de efluentes" className="h-12 w-12 object-contain" />
               <div className="font-display text-xl font-extrabold text-white">COMPACTO FIBRAS</div>
             </div>
             <p className="mt-4 text-sm">Estações compactas de tratamento de efluentes. Engenharia, performance e conformidade.</p>
