@@ -212,7 +212,7 @@ function Landing() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">A Solução</span>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl md:text-5xl">
-              ETE Compacta de Tratamento de Efluentes de Alta Performance
+              ETE Compacta de Tratamento de Esgoto e Efluentes de Alta Performance
             </h2>
           </div>
 
