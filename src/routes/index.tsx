@@ -388,10 +388,10 @@ function Landing() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <img src={mascotLogo} alt="Logotipo Compacto Fibras - estações compactas de tratamento de efluentes" className="h-12 w-12 object-contain" />
+              <img src={mascotLogo} alt="Logotipo Compacto Fibras - estações compactas de tratamento de esgoto e efluentes em Chapecó SC" className="h-12 w-12 object-contain" />
               <div className="font-display text-xl font-extrabold text-white">COMPACTO FIBRAS</div>
             </div>
-            <p className="mt-4 text-sm">Estações compactas de tratamento de efluentes. Engenharia, performance e conformidade.</p>
+            <p className="mt-4 text-sm">Estações compactas de tratamento de esgoto e efluentes. Engenharia, performance e conformidade ambiental.</p>
             <div className="mt-4">
               <CTAButton size="md">Falar no WhatsApp</CTAButton>
             </div>
