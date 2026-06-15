@@ -8,6 +8,6 @@ export function trackWhatsappConversion() {
   (window as typeof window & { gtag?: (...args: unknown[]) => void }).gtag?.(
     "event",
     "conversion",
-    { send_to: "AW-18204450552/o5Y2CNmC0LwcEPi9x-hD" },
+    { send_to: "AW-18204450552/o5Y2CNnC0LwcEPi9x-hD" },
   );
 }
