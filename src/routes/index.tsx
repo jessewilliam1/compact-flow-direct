@@ -10,6 +10,7 @@ import {
 import { WhatsappFloat } from "@/components/WhatsappFloat";
 import { WHATSAPP_URL, PHONE_DISPLAY, trackWhatsappConversion } from "@/lib/contact";
 import heroImg from "@/assets/station-hero.jpg";
+import eteGrandeImg from "@/assets/ete-grande.png.asset.json";
 import mascotLogo from "@/assets/mascot-logo.png";
 import station1 from "@/assets/station-1.jpg";
 import station2 from "@/assets/station-2.jpg";
@@ -147,10 +148,10 @@ function Landing() {
           <div>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest">
               <MapPin className="h-3.5 w-3.5 text-[var(--brand-lime)]" />
-              Chapecó — SC · Atendimento em todo o Brasil
+              ETE Compacta para Grandes Volumes · Chapecó-SC · Atendemos todo o Brasil
             </div>
             <h1 className="font-display text-4xl font-extrabold leading-[0.95] sm:text-5xl md:text-6xl">
-              Tratamento de Esgoto e Efluentes <span className="text-[var(--brand-lime)]">Compacto</span> em Chapecó-SC, Rápido e 100% Conforme a Lei
+              Estações de Tratamento de Esgoto em Chapecó para Indústrias, Frigoríficos e Condomínios
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/80">
               Estações compactas de tratamento de esgoto e efluentes em fibra de vidro com até <strong className="text-[var(--brand-lime)]">97% de eficiência</strong> na redução de DBO. Engenharia séria, instalação em poucos dias em toda a região Oeste de Santa Catarina.
@@ -170,8 +171,8 @@ function Landing() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-2xl bg-[var(--brand-lime)]/20 blur-2xl" />
             <img
-              src={heroImg}
-              alt="Estação compacta de tratamento de esgoto e efluentes (ETE) em fibra de vidro instalada em indústria de Chapecó SC - Compacto Fibras"
+              src={eteGrandeImg.url}
+              alt="Estação de tratamento de esgoto e efluentes de grande porte (ETE) em fibra de vidro para indústrias e frigoríficos em Chapecó SC - Compacto Fibras"
               width={1920}
               height={1080}
               className="relative w-full rounded-xl border border-white/10 shadow-2xl"
@@ -479,7 +480,7 @@ function Landing() {
           <div>
             <h4 className="font-display text-sm uppercase tracking-widest text-[var(--brand-lime)]">Contato</h4>
             <ul className="mt-3 space-y-2 text-sm">
-              <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Chapecó — SC</li>
+              <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Rod. Plínio Arlindo de Nês, 400 - Dom Gerônimo, Chapecó - SC, 89805-290</li>
               <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> {PHONE_DISPLAY}</li>
               <li>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={trackWhatsappConversion} className="inline-flex items-center gap-2 text-[var(--brand-lime)] hover:underline">
@@ -492,8 +493,8 @@ function Landing() {
             <h4 className="font-display text-sm uppercase tracking-widest text-[var(--brand-lime)]">Localização</h4>
             <div className="mt-3 overflow-hidden rounded-lg border border-white/10">
               <iframe
-                title="Localização Compacto Fibras - Chapecó SC"
-                src="https://www.google.com/maps?q=Chapec%C3%B3%2C+SC%2C+Brasil&output=embed"
+                title="Localização Compacto Fibras - Rod. Plínio Arlindo de Nês, 400 - Dom Gerônimo, Chapecó - SC"
+                src="https://www.google.com/maps?q=Rod.+Pl%C3%ADnio+Arlindo+de+N%C3%AAs%2C+400+-+Dom+Ger%C3%B4nimo%2C+Chapec%C3%B3+-+SC%2C+89805-290&output=embed"
                 width="100%"
                 height="180"
                 style={{ border: 0 }}
