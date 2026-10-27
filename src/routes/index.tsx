@@ -440,25 +440,44 @@ function Landing() {
             <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
               O que dizem quem já instalou
             </h2>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-[var(--brand)]/30 bg-[var(--brand)]/5 px-4 py-2 text-sm font-semibold text-[var(--brand-dark)] transition-colors hover:bg-[var(--brand)]/10"
+            >
+              <span className="flex gap-0.5">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                ))}
+              </span>
+              Somos 5 estrelas no Google — confira as avaliações
+            </a>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="rounded-xl border border-border bg-white p-6">
+            {GOOGLE_REVIEWS.map((r) => (
+              <div key={r.name} className="rounded-xl border border-border bg-white p-6">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--brand-dark)] text-[var(--brand-lime)] font-display font-bold">
-                    C{i}
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--brand-dark)] font-display font-bold text-[var(--brand-lime)]">
+                    {r.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-display font-bold text-[var(--brand-dark)]">[NOME EMPRESA]</div>
-                    <div className="text-xs text-muted-foreground">[CIDADE — UF]</div>
+                    <div className="font-display font-bold text-[var(--brand-dark)]">{r.name}</div>
+                    <div className="text-xs text-muted-foreground">{r.meta}</div>
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-muted-foreground italic">
-                  "[INSERIR DEPOIMENTO DE CLIENTE — substituir por avaliação real do projeto entregue]"
-                </p>
+                <div className="mt-3 flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <Star key={s} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground italic">"{r.text}"</p>
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-xs text-muted-foreground">
+            Avaliações reais publicadas no perfil da Compacto Fibras no Google.
+          </p>
         </div>
       </section>
 
@@ -500,7 +519,11 @@ function Landing() {
           <div>
             <h4 className="font-display text-sm uppercase tracking-widest text-[var(--brand-lime)]">Contato</h4>
             <ul className="mt-3 space-y-2 text-sm">
-              <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Rod. Plínio Arlindo de Nês, 400 - Dom Gerônimo, Chapecó - SC, 89805-290</li>
+              <li>
+                <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[var(--brand-lime)] hover:underline">
+                  <MapPin className="h-4 w-4" /> Ver endereço no Google Maps
+                </a>
+              </li>
               <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> {PHONE_DISPLAY}</li>
               <li>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={trackWhatsappConversion} className="inline-flex items-center gap-2 text-[var(--brand-lime)] hover:underline">
