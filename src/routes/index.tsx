@@ -549,7 +549,18 @@ function Landing() {
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-xs text-white/60">
           <p className="mb-2">Compacto Fibras — Tratamento de Esgoto e Efluentes em Chapecó, SC | Atendimento em toda a região Oeste de Santa Catarina</p>
-          © {new Date().getFullYear()} Compacto Fibras — Todos os direitos reservados.
+          <p>© {new Date().getFullYear()} R&amp;V Soluções. Todos os direitos reservados.</p>
+          <p className="mt-1">
+            Desenvolvido por{" "}
+            <a
+              href="https://www.instagram.com/eusoujessewilliam"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-medium text-[var(--brand-lime)] hover:underline"
+            >
+              Grupo Tryad <span aria-hidden="true">↗</span>
+            </a>
+          </p>
         </div>
       </footer>
 
