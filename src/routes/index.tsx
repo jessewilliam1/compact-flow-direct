@@ -93,15 +93,6 @@ const SERVICE_CITIES = [
   "São Miguel do Oeste", "Maravilha", "Quilombo", "Xaxim",
 ];
 
-const DELIVERED_PROJECTS = [
-  "ETE Cliente [NOME DA EMPRESA] — Chapecó (SC)",
-  "Estação de Tratamento de Esgoto — [NOME DA EMPRESA] — [CIDADE] (SC)",
-  "ETE Compacta — [NOME DA EMPRESA] — Xanxerê (SC)",
-  "Estação de Tratamento de Efluentes — [NOME DA EMPRESA] — Concórdia (SC)",
-  "ETE Cliente [NOME DA EMPRESA] — São Miguel do Oeste (SC)",
-  "Estação de Tratamento de Esgoto — [NOME DA EMPRESA] — [CIDADE] (SC)",
-];
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -345,27 +336,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* PROJETOS ENTREGUES */}
-      <section className="bg-secondary py-20">
-        <div className="mx-auto max-w-5xl px-4">
-          <div className="text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">Prova Social</span>
-            <h2 className="mt-2 font-display text-3xl font-extrabold text-[var(--brand-dark)] sm:text-4xl">
-              Projetos Entregues: Estações de Tratamento de Esgoto Instaladas
-            </h2>
-            <p className="mt-3 text-muted-foreground">Algumas das estações de tratamento de esgoto e efluentes que projetamos e instalamos em Chapecó e região.</p>
-          </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {DELIVERED_PROJECTS.map((p, i) => (
-              <div key={i} className="flex items-start gap-3 rounded-xl border border-border bg-white p-5">
-                <Droplets className="mt-0.5 h-5 w-5 shrink-0 text-[var(--brand)]" />
-                <h3 className="font-display text-base font-bold text-[var(--brand-dark)]">{p}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ÁREAS DE ATENDIMENTO */}
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-4">
@@ -549,7 +519,7 @@ function Landing() {
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-xs text-white/60">
           <p className="mb-2">Compacto Fibras — Tratamento de Esgoto e Efluentes em Chapecó, SC | Atendimento em toda a região Oeste de Santa Catarina</p>
-          <p>© {new Date().getFullYear()} R&amp;V Soluções. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Compacto Fibras. Todos os direitos reservados.</p>
           <p className="mt-1">
             Desenvolvido por{" "}
             <a
